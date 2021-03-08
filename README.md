@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - The Ansible playbooks required to recreate the Elk server are [install_elk.yml](Ansible/roles/install-elk.yml) and [filebeat-playbook.yml](Ansible/roles/filebeat-playbook.yml)
-  Note: filebeat requires a [filebeat-config.yml](Ansible/roles/files/filebeat-config.yml) file. The [filebeat-playbook.yml](Ansible/roles/filebeat-playbook.yml) will need to reflect the correct path of the config file. You will also need to alter lines 1105 to 1107 to reflect the Elk server IP and the username and password, as well as Line 1805 to have the correct IP
+  Note: filebeat requires a [filebeat-config.yml](Ansible/roles/files/filebeat-config.yml) file. The [filebeat-playbook.yml](Ansible/roles/filebeat-playbook.yml) will need to reflect the correct path of the [filebeat-config.yml](Ansible/roles/files/filebeat-config.yml) file. You will also need to alter lines 1105 to 1107 to reflect the Elk server IP and the username and password, as well as Line 1805 to have the correct IP
 
 This document contains the following details:
 - Description of the Topologu
