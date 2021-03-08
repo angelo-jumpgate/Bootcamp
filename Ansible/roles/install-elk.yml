@@ -55,3 +55,7 @@
       systemd:
         name: docker
         enabled: yes
+        
+      # Use shell module
+    - name: increase virtual memory on restart
+      shell: echo "vm.max_map_count=262144" >> /etc/sysctl.conf
