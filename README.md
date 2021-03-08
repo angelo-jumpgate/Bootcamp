@@ -25,7 +25,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - Load Balancers are an aspect of the Availabilty part of the CIA triad, by increasing the availablity of a resource.
- - A Jumpbox allows an organisation to restrict administrative tasks to only come in from one connection adding another layer of security, this is confidentiality aspect of the CIA triad.
+ - A Jumpbox allows an organisation to restrict administrative tasks to only come in from one connection adding another layer of security, this is the confidentiality aspect of the CIA triad.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - Filebeat watches for log files in location that have been specified and monitors anmd records the changes.
@@ -34,12 +34,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function    | IP Address | Operating System   |
+|----------|----------   |------------|------------------  |
+| Jump Box | Gateway     | 10.0.0.4   | Linux Ubuntu 18.04 |
+| Web-1    | Docker-DVWA | 10.0.0.5   | Linux Ubuntu 18.04 |
+| Web-2    | Docker-DVWA | 10.0.0.6   | Linux Ubuntu 18.04 |
+| Web-3    | Docker-DVWA | 10.0.0.8   | Linux Ubuntu 18.04 |
 
 ### Access Policies
 
