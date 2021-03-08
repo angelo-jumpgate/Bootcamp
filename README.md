@@ -40,7 +40,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1    | Docker-DVWA | 10.0.0.5   | Linux Ubuntu 18.04 |
 | Web-2    | Docker-DVWA | 10.0.0.6   | Linux Ubuntu 18.04 |
 | Web-3    | Docker-DVWA | 10.0.0.8   | Linux Ubuntu 18.04 |
-| Elk1     | Elk stack   | 10.1.0.4   | Linux Ubuntu 18.04 |
+| Elk1     | Elk stack   | 10.1.0.4   | Linux Ubuntu 18.04 |  
 
 ### Access Policies
 
@@ -54,11 +54,13 @@ Machines within the network can only be accessed by ssh.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name     | Publicly Accessible | Allowed IP Addresses                                                    |
+|----------|---------------------|-------------------------------------------------------------------------|
+| JumpBox  |    No               | A Specified IP address Only                                             |
+| Web-1    |    No               | Jumpbox 10.0.0.4 for SSH & A Specified IP address Only for TCP Port 80  |
+| Web-2    |    No               | Jumpbox 10.0.0.4 for SSH & A Specified IP address Only for TCP Port 80  |
+| Web-3    |    No               | Jumpbox 10.0.0.4 for SSH & A Specified IP address Only for TCP Port 80  |
+| Elk1     |    No               | Jumpbox 10.0.0.4 for SSH & A Specified IP address Only for TCP Port 5601|
 
 ### Elk Configuration
 
