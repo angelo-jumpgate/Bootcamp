@@ -40,6 +40,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1    | Docker-DVWA | 10.0.0.5   | Linux Ubuntu 18.04 |
 | Web-2    | Docker-DVWA | 10.0.0.6   | Linux Ubuntu 18.04 |
 | Web-3    | Docker-DVWA | 10.0.0.8   | Linux Ubuntu 18.04 |
+| Elk1     | Elk stack   | 10.1.0.4   | Linux Ubuntu 18.04 |
 
 ### Access Policies
 
