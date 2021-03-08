@@ -12,7 +12,7 @@
       # Use copy module
   - name: drop in metricbeat.yml
     copy:
-      src: /etc/ansible/roles/metricbeat-config.yml
+      src: /etc/ansible/roles/files/metricbeat-config.yml
       dest: /etc/metricbeat/metricbeat.yml
       # Use command module
   - name: enable and configure system module
