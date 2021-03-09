@@ -102,7 +102,22 @@ SSH into the control node and follow the steps below:
 
 _TODO: Answer the following questions to fill in the blanks:_
 - [filebeat-playbook.yml](Ansible/roles/filebeat-playbook.yml) is copied to /etc/ansible/roles and [filebeat-config.yml](Ansible/roles/files/filebeat-config.yml) to /etc/ansible/roles/files/
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- To run the Ansible playbook on a particular machine the /etc/ansible/hosts file will need to be edited to add the machine to the group you are running the playbook on. 
+- By using differendt groups in the /etc/ansible/hosts file to store the IP addresses of different machines you could issue a command to run a playbook on the elk servers or install filebeat on the Web servers group (ie ansible-playbook install-elk.yml or ansible playbook filebeats-playbook.yml)
+- To confirm if the Elk server is running you need to surf to the public IP of the webserver on port 5601 from the allowed specified IP.
+If you havve allowed IP 1.2.3.4 to access the server at public address 5.6.7.8 then you would surf to 5.6.7.8:5601
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+To install the Elk server, filebeat and metricbeat you will need to perform the following tasks
+- SSH to the jumpbox
+- sudo docker container list -a (to list the containers and to locate the ansible container)
+- sudo docker start "container-name"
+- sudo docker attach "container-name"
+- ensure you have placed your playbooks in /etc/ansible/roles
+- place your config files in /etc/ansible/roles/files
+- edit your /etc/ansible/ansible.cfg as per instructions above
+- edit your /etc/ansible/hosts file to include your elk server under the [elk] entries in the hosts file
+- edit your /etc/ansible/hosts file to include your web server under the [webservers] entries in the hosts file
+- run sudo ansible-playbook /etc/ansible/roles/install-elk.yml and wait a few minutes for the task to complete.
+- run sudo ansible-playbook /etc/ansible/roles/filebeat-playbook.yml and wait a few minutes for the task to complete.
+- run sudo ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml and wait a few minutes for the task to complete.
+Open a web browser from the allowed IP address and surfv to "Elk Server Public IP":5601 to see the kibana  poirtal pages.
