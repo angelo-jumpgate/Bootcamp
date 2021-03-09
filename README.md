@@ -120,4 +120,4 @@ To install the Elk server, filebeat and metricbeat you will need to perform the 
 - run sudo ansible-playbook /etc/ansible/roles/install-elk.yml and wait a few minutes for the task to complete.
 - run sudo ansible-playbook /etc/ansible/roles/filebeat-playbook.yml and wait a few minutes for the task to complete.
 - run sudo ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml and wait a few minutes for the task to complete.
-Open a web browser from the allowed IP address and surfv to "Elk Server Public IP":5601 to see the kibana  poirtal pages.
+Open a web browser from the allowed IP address and surfv to "Elk Server Public IP":5601 to see the kibana  portal pages.
