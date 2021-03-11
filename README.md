@@ -33,7 +33,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat monitors servers by collecting metrics from the system and services running on the server.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function    | IP Address | Operating System   |
 |----------|----------   |------------|------------------  |
@@ -100,7 +100,7 @@ SSH into the control node and follow the steps below:
   the ElasticSearch and Kibana sections of the configuration file.
 - Run the playbook, and navigate to ELk-Server to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+
 - [filebeat-playbook.yml](Ansible/roles/filebeat-playbook.yml) is copied to /etc/ansible/roles and [filebeat-config.yml](Ansible/roles/files/filebeat-config.yml) to /etc/ansible/roles/files/
 - To run the Ansible playbook on a particular machine the /etc/ansible/hosts file will need to be edited to add the machine to the group you are running the playbook on. 
 - By using differendt groups in the /etc/ansible/hosts file to store the IP addresses of different machines you could issue a command to run a playbook on the elk servers or install filebeat on the Web servers group (ie ansible-playbook install-elk.yml or ansible playbook filebeats-playbook.yml)
@@ -120,4 +120,4 @@ To install the Elk server, filebeat and metricbeat you will need to perform the 
 - run sudo ansible-playbook /etc/ansible/roles/install-elk.yml and wait a few minutes for the task to complete.
 - run sudo ansible-playbook /etc/ansible/roles/filebeat-playbook.yml and wait a few minutes for the task to complete.
 - run sudo ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml and wait a few minutes for the task to complete.
-Open a web browser from the allowed IP address and surfv to "Elk Server Public IP":5601 to see the kibana  portal pages.
+Open a web browser from the allowed IP address and surf to "Elk Server Public IP":5601 to see the kibana  portal pages.
