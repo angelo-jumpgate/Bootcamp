@@ -28,7 +28,7 @@ Load balancing ensures that the application will be highly available, in additio
 - Load Balancers are an aspect of the Availabilty part of the CIA triad, by increasing the availablity of a resource.
  - A Jumpbox allows an organisation to restrict administrative tasks to only come in from one connection adding another layer of security, this is the confidentiality aspect of the CIA triad.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - Filebeat watches for log files in location that have been specified and monitors anmd records the changes.
 - Metricbeat monitors servers by collecting metrics from the system and services running on the server.
 
